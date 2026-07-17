@@ -11,8 +11,9 @@ again before the app continues.
 
 ## 1. Who is responsible for your data
 
-Work & Life is developed and published by **Kalakandan**, an individual developer based in **India**.
-For the limited data described in section 4, that person is the **data controller**.
+Work & Life is developed and published by **Kalakandan**, an individual developer based in the
+**United Arab Emirates**. For the limited data described in section 4, that person is the
+**data controller**.
 
 Contact: **imkalakandan@gmail.com**
 
