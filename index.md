@@ -1,8 +1,12 @@
 # Privacy Policy — Work & Life
 
-**Last updated: 16 July 2026**
+**Last updated: 5 August 2026**
 **Policy version: 1**
 
+<!-- Policy version MUST match AdConsentPrefs.POLICY_VERSION in the app. The app compares the two:
+     bump both together on a MATERIAL change (new data, new recipient, new purpose) and every user
+     is re-asked to agree. Do NOT bump for typos or rewording — re-prompting for cosmetic edits
+     trains people to tap through without reading, which destroys the consent you were documenting. -->
 
 Work & Life ("the app") is a planner for shift and irregular-schedule workers. This policy explains,
 in plain language, exactly what the app does with your information. It describes the app **as it
@@ -30,8 +34,11 @@ Contact: **imkalakandan@gmail.com**
 
 Everything you enter — shift pattern, schedule changes, leave, habits, tasks, spending, pay settings,
 medication and family reminders, and sleep preferences — is stored **only in the app's private
-storage on your own phone**, encrypted at rest. It is never uploaded to a server of ours, because we
-do not operate one. The app's backup rules explicitly exclude this data from cloud backup and
+storage on your own phone**. The database holding it is encrypted at rest. A small amount of app
+state sits alongside it in the app's private area without that extra layer — the answers you give
+during setup before you finish it, and the details of an alarm you have snoozed — where Android
+prevents other apps from reading it. None of it is ever uploaded to a server of ours, because we do
+not operate one. The app's backup rules explicitly exclude all of this from cloud backup and
 device-to-device transfer.
 
 We never receive, see, store, or have any technical means of accessing it.
@@ -147,17 +154,18 @@ national data protection supervisory authority**.
   **own built-in speech recognition** so you can dictate instead of type. The system feature handles
   the microphone; **the app itself holds no microphone permission and never records, stores, or
   transmits any audio.**
-- **Calendar (optional):** only if you turn on "Device calendar sync" in Settings. It writes your
-  shifts into a calendar on your own phone using Android's standard calendar system. Nothing is sent
-  to us.
+- **Calendar:** the app holds the Android calendar permissions but **no longer offers any feature
+  that uses them** — the "Device calendar sync" option has been removed. The permissions remain only
+  so the app can tidy up (delete) a calendar an earlier version created on your phone. Nothing was
+  ever, and nothing is, sent to us.
 
 The app requests **no location, camera, contacts, or storage permissions**.
 
 ## 12. Sharing
 
-When you use a "Share" feature (your roster, a calendar file, your free evenings, a backup file, or
-an "I'm home" message), Android's own share sheet opens and **you choose** where it goes. The app
-itself never transmits your entered information automatically.
+When you use a "Share" feature (your roster, your free evenings, a backup file, or an "I'm home"
+message), Android's own share sheet opens and **you choose** where it goes. The app itself never
+transmits your entered information automatically.
 
 ## 13. Children
 
@@ -168,8 +176,11 @@ contact us and we will act.
 
 ## 14. Security
 
-Data you enter is held in the app's private storage, encrypted at rest, and excluded from cloud
-backup and device transfer. An optional biometric / screen-lock app lock is available in Settings.
+Data you enter is held in the app's private storage and excluded from cloud backup and device
+transfer. The database is encrypted at rest, with the key held in the device's own secure key store.
+A small amount of app state — unfinished setup answers, and snoozed-alarm details — is kept in the
+app's private area without that additional encryption, protected by Android's app sandbox rather
+than by a key. An optional biometric / screen-lock app lock is available in Settings.
 Because no data is transmitted to or held by us, there is no server of ours that can be breached.
 
 ## 15. Changes to this policy
