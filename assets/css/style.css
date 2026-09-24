@@ -1,0 +1,117 @@
+/* Work & Life site — our own stylesheet, in the app's own colours. No theme, no outside fonts. */
+:root {
+  --page: #F2F4F1;
+  --card: #FFFFFF;
+  --ink: #101312;
+  --quiet: #58625D;
+  --line: #E5E8E5;
+  --amber: #FFB400;
+  --link: #3F5FE0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #0D100F;
+    --card: #161A19;
+    --ink: #ECEFEC;
+    --quiet: #8F9994;
+    --line: #232A27;
+    --link: #7C9CFF;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.top {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+}
+.brand::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background: var(--amber);
+  margin-right: 8px;
+  vertical-align: -1px;
+}
+nav a {
+  color: var(--quiet);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+nav a[aria-current="page"] {
+  background: var(--ink);
+  color: var(--page);
+}
+.page {
+  max-width: 760px;
+  margin: 16px auto 24px;
+  padding: 28px 24px 32px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.5px; margin: 0 0 16px; }
+h2 { font-size: 22px; line-height: 1.3; margin: 36px 0 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+h3 { font-size: 18px; margin: 24px 0 8px; }
+p, ul, ol { margin: 0 0 14px; }
+li { margin: 6px 0; }
+a { color: var(--link); }
+strong { font-weight: 700; }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  background: var(--page);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+blockquote {
+  margin: 14px 0;
+  padding: 10px 16px;
+  background: var(--page);
+  border-left: 4px solid var(--amber);
+  border-radius: 0 12px 12px 0;
+  color: var(--quiet);
+}
+blockquote p { margin: 0; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+img, video { max-width: 100%; height: auto; border-radius: 16px; }
+sub { font-size: 0.85em; color: var(--quiet); }
+.foot {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  color: var(--quiet);
+  font-size: 14px;
+}
+.foot a { color: var(--quiet); }
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .top { padding: 16px 16px 0; }
+  .page { margin: 12px 12px 20px; padding: 22px 18px 26px; border-radius: 16px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 20px; }
+}

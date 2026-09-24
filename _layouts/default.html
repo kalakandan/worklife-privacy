@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="theme-color" content="#F2F4F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D100F" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="{{ '/' | relative_url }}">Work &amp; Life</a>
+  <nav>
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Privacy policy</a>
+    <a href="{{ '/pattern-guide/' | relative_url }}"{% if page.url contains 'pattern-guide' %} aria-current="page"{% endif %}>Pattern guide</a>
+  </nav>
+</header>
+<main class="page">
+{{ content }}
+</main>
+<footer class="foot">
+  <p>Work &amp; Life for Android · © 2026 Kalakandan · <a href="mailto:imkalakandan@gmail.com">imkalakandan@gmail.com</a></p>
+</footer>
+</body>
+</html>

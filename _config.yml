@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
+# No theme: the layout in _layouts/default.html and assets/css/style.css are the site's own.
 title: Work & Life for Android
 description: Privacy policy and pattern guide for the Work & Life Android app
+# The site lives at kalakandan.github.io/worklife-privacy/. Clear this if it ever moves to its own domain.
+baseurl: /worklife-privacy
